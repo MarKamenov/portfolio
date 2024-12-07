@@ -1,0 +1,24 @@
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--background-color);
+  padding-top: 5rem;
+
+  .content {
+    text-align: center;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: var(--primary-color);
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      color: var(--secondary-color);
+    }
+  }
+}
+
