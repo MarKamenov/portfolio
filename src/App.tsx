@@ -1,11 +1,14 @@
+import { lazy, Suspense } from 'react';
+import { Blocks } from 'react-loader-spinner';
 import { BrowserRouter, Route, Routes } from 'react-router';
+// lazy imports
+const HomePage = lazy(() => import('./components/Home')) as React.LazyExoticComponent<() => JSX.Element>;
+const AboutPage = lazy(() => import('./components/About')) as React.LazyExoticComponent<() => JSX.Element>;
+const SkillsPage = lazy(() => import('./components/Skills')) as React.LazyExoticComponent<() => JSX.Element>;
+const ProjectsPage = lazy(() => import('./components/Projects')) as React.LazyExoticComponent<() => JSX.Element>;
+const ContactPage = lazy(() => import('./components/Contact')) as React.LazyExoticComponent<() => JSX.Element>;
 
 import { Header } from './components/Header';
-import { Home } from './components/Home';
-import { About } from './components/About';
-import { Skills } from './components/Skills';
-import { Projects } from './components/Projects';
-import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import styles from './App.module.scss';
 
@@ -23,19 +26,27 @@ export const App: React.FC = () => {
       <BrowserRouter>
         <Header />
         <main>
-          <Routes>
-            <Route path="/home" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/skills" element={<Skills />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<div>404: Not Found</div>} />
-          </Routes>
+          <Suspense fallback={<Blocks
+            height="80"
+            width="80"
+            color="#4fa94d"
+            ariaLabel="blocks-loading"
+            wrapperClass={styles.loader}
+            visible
+          />}>
+            <Routes>
+              <Route path="/home" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/skills" element={<SkillsPage />} />
+              <Route path="/projects" element={<ProjectsPage />} />
+              <Route path="/contact" element={<ContactPage />} />
+              <Route path="*" element={<div>404: Not Found</div>} />
+            </Routes>
+          </Suspense>
+
         </main>
       </BrowserRouter>
       <Footer />
     </div>
   );
 };
-

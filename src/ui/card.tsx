@@ -2,7 +2,7 @@ import * as React from "react"
 import { cn } from "../lib/utils"
 import styles from "./card.module.scss"
 
-const Card = React.forwardRef<
+export const Card = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
@@ -12,9 +12,8 @@ const Card = React.forwardRef<
     {...props}
   />
 ))
-Card.displayName = "Card"
 
-const CardHeader = React.forwardRef<
+export const CardHeader = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
@@ -24,21 +23,21 @@ const CardHeader = React.forwardRef<
     {...props}
   />
 ))
-CardHeader.displayName = "CardHeader"
 
-const CardTitle = React.forwardRef<
+export const CardTitle = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLHeadingElement>
->(({ className, ...props }, ref) => (
+>(({ className, children, ...props }, ref) => (
   <h3
     ref={ref}
     className={cn(styles.title, className)}
     {...props}
-  />
+  >
+    {children}
+  </h3>
 ))
-CardTitle.displayName = "CardTitle"
 
-const CardDescription = React.forwardRef<
+export const CardDescription = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLParagraphElement>
 >(({ className, ...props }, ref) => (
@@ -48,17 +47,15 @@ const CardDescription = React.forwardRef<
     {...props}
   />
 ))
-CardDescription.displayName = "CardDescription"
 
-const CardContent = React.forwardRef<
+export const CardContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
   <div ref={ref} className={cn(styles.content, className)} {...props} />
 ))
-CardContent.displayName = "CardContent"
 
-const CardFooter = React.forwardRef<
+export const CardFooter = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => (
@@ -68,7 +65,5 @@ const CardFooter = React.forwardRef<
     {...props}
   />
 ))
-CardFooter.displayName = "CardFooter"
 
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 

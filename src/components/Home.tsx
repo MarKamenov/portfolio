@@ -1,9 +1,9 @@
 import { Button } from "../ui/button"
 import styles from './Home.module.scss';
 
-export const Home: React.FC = () => {
+const Home: React.FC = () => {
   return (
-    <section id="home" className={styles.hero}>
+    <section id="home" className={styles.home}>
       <div className="container">
         <h1>John Doe</h1>
         <p>Front-End Developer</p>
@@ -14,4 +14,5 @@ export const Home: React.FC = () => {
     </section>
   );
 };
+export default Home;
 

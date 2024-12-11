@@ -1,7 +1,7 @@
 import { Badge } from "../ui/badge"
 import styles from './Skills.module.scss';
 
-export const Skills: React.FC = () => {
+const Skills: React.FC = () => {
   const skills: string[] = ['TypeScript', 'React', 'HTML5', 'CSS3', 'SCSS', 'JavaScript', 'Responsive Design', 'Git'];
 
   return (
@@ -19,4 +19,5 @@ export const Skills: React.FC = () => {
     </section>
   );
 };
+export default Skills;
 

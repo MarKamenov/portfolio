@@ -30,7 +30,7 @@ const projects: Project[] = [
   },
 ];
 
-export const Projects: React.FC = () => {
+const Projects: React.FC = () => {
   return (
     <section id="projects" className={styles.projects}>
       <div className="container">
@@ -57,4 +57,5 @@ export const Projects: React.FC = () => {
     </section>
   );
 };
+export default Projects;
 

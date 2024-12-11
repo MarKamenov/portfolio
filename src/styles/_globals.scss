@@ -64,6 +64,7 @@ a {
   outline-offset: 2px;
 }
 
+// used to detect if a user has enabled a setting on their device to minimize the amount of non-essential motion
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
