@@ -10,6 +10,7 @@ const ContactPage = lazy(() => import('./components/Contact')) as React.LazyExot
 
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
+import { AccessibleNavigation } from './components/AccessibleNavigation';
 import styles from './App.module.scss';
 
 export const App: React.FC = () => {
@@ -22,10 +23,11 @@ export const App: React.FC = () => {
       <meta property="og:description" content="Explore John Doe's front-end development projects and skills." />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://johndoe-portfolio.com" />
-      <meta property="og:image" content="https://johndoe-portfolio.com/og-image.jpg" />
+      <meta property="og:image" content="https://cdn.prod.website-files.com/6040ba28127600ad9182e1be/67481a5e5fa505c7faac4e7c_pcv.webp" />
       <BrowserRouter>
         <Header />
         <main>
+          <AccessibleNavigation />
           <Suspense fallback={<Blocks
             height="80"
             width="80"
@@ -43,7 +45,6 @@ export const App: React.FC = () => {
               <Route path="*" element={<div>404: Not Found</div>} />
             </Routes>
           </Suspense>
-
         </main>
       </BrowserRouter>
       <Footer />

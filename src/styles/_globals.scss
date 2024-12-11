@@ -21,6 +21,15 @@ body {
   background-color: var(--background-color);
 }
 
+.dark {
+  // should update colours here for theme change
+  --primary-color: #0e2a57;
+  --secondary-color: #25272b;
+  --background-color: #5f646d;
+  --text-color: #000000;
+  --white: #979797;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
