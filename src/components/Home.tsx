@@ -1,8 +1,7 @@
-import React from 'react';
 import { Button } from "../ui/button"
-import styles from './Hero.module.scss';
+import styles from './Home.module.scss';
 
-export const Hero: React.FC = () => {
+export const Home: React.FC = () => {
   return (
     <section id="home" className={styles.hero}>
       <div className="container">

@@ -10,7 +10,7 @@ export interface ButtonProps
   size?: 'default' | 'sm' | 'lg' | 'icon'
 }
 
-const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant = 'default', size = 'default', asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button"
     return (
@@ -27,7 +27,6 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     )
   }
 )
-Button.displayName = "Button"
 
-export { Button }
+
 

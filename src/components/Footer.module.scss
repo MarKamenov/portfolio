@@ -1,7 +1,9 @@
+@import '../styles/mixins';
+
 .footer {
   background-color: var(--primary-color);
   color: var(--white);
-  padding: 2rem 0;
+  padding-top: 2rem 1rem;
 
   .container {
     display: flex;
@@ -21,7 +23,7 @@
     a {
       color: var(--white);
       font-size: 1.5rem;
-      transition: color 0.3s ease;
+      @include transition(color);
 
       &:hover {
         color: var(--background-color);
@@ -33,4 +35,3 @@
     }
   }
 }
-
