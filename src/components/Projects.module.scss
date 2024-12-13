@@ -1,11 +1,11 @@
 .projects {
-  background-color: var(--white);
+  background-color: var(--page-background-color);
   padding: 4rem 0;
 
   h2 {
     text-align: center;
     margin-bottom: 2rem;
-    color: var(--primary-color);
+    color: var(--page-title);
   }
 
   .projectGrid {
@@ -15,7 +15,7 @@
   }
 
   .projectCard {
-    background-color: var(--background-color);
+    background-color: white;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -32,4 +32,3 @@
     }
   }
 }
-

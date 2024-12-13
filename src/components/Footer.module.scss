@@ -1,8 +1,8 @@
 @import '../styles/mixins';
 
 .footer {
-  background-color: var(--primary-color);
-  color: var(--white);
+  background-color: var(--footer-background-color);
+  color: white;
   padding: 1rem;
 
   // mobile first approach
@@ -15,7 +15,6 @@
       flex-direction: row;
       justify-content: space-between;
     }
-
   }
 
   .socialLinks {
@@ -28,7 +27,7 @@
       @include transition(color);
 
       &:hover {
-        color: var(--background-color);
+        color: var(--text-color);
       }
     }
 

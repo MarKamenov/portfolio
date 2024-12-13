@@ -22,7 +22,7 @@ export const Header: React.FC = () => {
           <Link to="/home" aria-label="Home">JD</Link>
         </div>
         <div className={styles.rightMenu}>
-          <ul className={`${styles.navLinks} ${isNavOpen ? styles.active : ''}`}>
+          <ul className={cn(styles.navLinks, isNavOpen && styles.active)}>
             <li><NavLink to="/home" onClick={toggleNav}>Home</NavLink></li>
             <li><NavLink to="/about" onClick={toggleNav}>About</NavLink></li>
             <li><NavLink to="/skills" onClick={toggleNav}>Skills</NavLink></li>
@@ -31,7 +31,7 @@ export const Header: React.FC = () => {
           </ul>
           <div className={styles.headerButtons}>
             <Button
-              variant="ghost"
+              variant="outline"
               size="icon"
               onClick={toggleTheme}
               aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} theme`}
@@ -39,7 +39,7 @@ export const Header: React.FC = () => {
               {theme === 'light' ? <Moon /> : <Sun />}
             </Button>
             <Button
-              variant="ghost"
+              variant="outline"
               size="icon"
               className={styles.burger}
               onClick={toggleNav}
@@ -55,7 +55,6 @@ export const Header: React.FC = () => {
             </Button>
           </div>
         </div>
-
       </nav>
     </header>
   );

@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-  --primary-color: #3b82f6;
-  --secondary-color: #6b7280;
-  --background-color: #f3f4f6;
-  --text-color: #1f2937;
-  --white: #ffffff;
+  --page-title: #0056b3;
+  --primary-color: #0056b3;
+  --secondary-color: #6c757d;
+  --page-background-color: #fff;
+  --header-background-color: #fff;
+  --footer-background-color: #0056b3;
+  --text-color: #333;
+  --white: #fff;
 }
 
 * {
@@ -19,15 +22,16 @@ body {
   line-height: 1.5;
   color: var(--text-color);
   background-color: var(--background-color);
-}
 
-.dark {
-  // should update colours here for theme change
-  --primary-color: #0e2a57;
-  --secondary-color: #25272b;
-  --background-color: #5f646d;
-  --text-color: #000000;
-  --white: #979797;
+  &.dark {
+    --page-title: #f8f8f8;
+    --primary-color: #4dabf7;
+    --secondary-color: #adb5bd;
+    --page-background-color: #002147;
+    --text-color: #e0e0e0;
+    --header-background-color: #5e738e;
+    --footer-background-color: #09232e;
+  }
 }
 
 .container {

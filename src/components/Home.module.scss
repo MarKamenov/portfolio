@@ -1,14 +1,14 @@
 .home {
-  background-color: var(--background-color);
+  background-color: var(--page-background-color);
   padding-top: 5rem;
 
-  .content {
+  .wrapper {
     text-align: center;
 
     h1 {
       font-size: 3rem;
       margin-bottom: 1rem;
-      color: var(--primary-color);
+      color: var(--page-title);
     }
 
     p {

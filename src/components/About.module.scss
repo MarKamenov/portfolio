@@ -1,17 +1,17 @@
 .about {
-  background-color: var(--white);
+  background-color: var(--page-background-color);
   padding: 4rem 0;
 
   h2 {
     text-align: center;
     margin-bottom: 2rem;
-    color: var(--primary-color);
+    color: var(--page-title);
   }
 
   p {
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
-    color: var(--text-color);
+    color: var(--secondary-color);
   }
 }
