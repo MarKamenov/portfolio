@@ -12,7 +12,7 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 export const ThemeProvider = ({ children }: PropsWithChildren): JSX.Element => {
     const [theme, setTheme] = useState<Theme>(() => {
         const savedTheme = localStorage.getItem('theme');
-        return (savedTheme as Theme) || 'light';
+        return (savedTheme as Theme) ?? 'light';
     });
 
     useEffect(() => {

@@ -2,7 +2,7 @@ import { Badge } from "../ui/badge"
 import styles from './Skills.module.scss';
 
 const Skills: React.FC = () => {
-  const skills: string[] = ['TypeScript', 'React', 'HTML5', 'CSS3', 'SCSS', 'JavaScript', 'Responsive Design', 'Git'];
+  const skills: string[] = ['TypeScript', 'React', 'React Native', 'Angular', 'HTML5', 'CSS3', 'SCSS', 'JavaScript', 'Responsive Design', 'Unit Testing', 'Git', 'Node'];
 
   return (
     <section id="skills" className={styles.skills}>

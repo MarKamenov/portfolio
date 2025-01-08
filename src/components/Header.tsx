@@ -19,7 +19,7 @@ export const Header: React.FC = () => {
     <header className={cn(styles.header, theme === 'dark' ? styles.headerDark : '')}>
       <nav className={styles.nav} aria-label="Main navigation">
         <div className={styles.logo}>
-          <Link to="/home" aria-label="Home">JD</Link>
+          <Link to="/home" aria-label="Home">MK</Link>
         </div>
         <div className={styles.rightMenu}>
           <ul className={cn(styles.navLinks, isNavOpen ? styles.active : '')}>
