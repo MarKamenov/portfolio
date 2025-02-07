@@ -72,7 +72,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Deployment
 
-This project is deployed on Vercel and can be accessed at: [https://portfolio-ktcpss0cp-markamenovs-projects.vercel.app/home](https://portfolio-ktcpss0cp-markamenovs-projects.vercel.app/home)
+This project is deployed on Vercel and can be accessed at: [https://portfolio-three-mu-23.vercel.app/home](https://portfolio-three-mu-23.vercel.app/home)
 
 ## Contact
 
