@@ -1,4 +1,7 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card"
+import consultants from '../assets/consultants.png';
+import pos from '../assets/pos.png';
+import movies from '../assets/movies.png';
 import { Button } from "../ui/button"
 import styles from './Projects.module.scss';
 
@@ -11,22 +14,22 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: 'TypeScript Task Manager',
-    description: 'A full-featured task management application built with React and TypeScript.',
-    image: 'https://via.placeholder.com/300x200',
-    link: '#',
+    title: 'Product of sale',
+    description: 'A full-featured sale management app built with React and TypeScript.',
+    image: pos,
+    link: 'https://product-sale-mu.vercel.app/',
   },
   {
-    title: 'Responsive E-commerce Site',
-    description: 'A responsive e-commerce website built with Next.js and TypeScript.',
-    image: 'https://via.placeholder.com/300x200',
-    link: '#',
+    title: 'Consultants',
+    description: 'A responsive paginated list of consultants app built with Angular.',
+    image: consultants,
+    link: 'https://v0-consultants-imvn4mwd4ge.vercel.app/home?page=1&per_page=10',
   },
   {
-    title: 'Interactive Data Visualization',
-    description: 'An interactive data visualization project using D3.js and TypeScript.',
-    image: 'https://via.placeholder.com/300x200',
-    link: '#',
+    title: 'Movies',
+    description: 'A responsive movie app with filtering using React and TypeScript.',
+    image: movies,
+    link: 'https://movies-sable-chi.vercel.app/',
   },
 ];
 
@@ -37,7 +40,7 @@ const Projects: React.FC = () => {
         <h2>Projects</h2>
         <div className={styles.projectGrid}>
           {projects.map((project, index) => (
-            <Card key={index} className={styles.projectCard}>
+            <Card key={`${project.title}${index}`} className={styles.projectCard}>
               <CardHeader>
                 <CardTitle>{project.title}</CardTitle>
               </CardHeader>

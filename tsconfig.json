@@ -23,6 +23,6 @@
   },
   "include": [
     "src",
-    "global.d.ts"
+    "typings"
   ]
 }
